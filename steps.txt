@@ -1,0 +1,24 @@
+Old step to run:
+1)    roslaunch stdr_launchers server_with_map_and_gui_plus_robot.launch
+2)   rviz
+3)   rosrun teleop_twist_keyboard teleop_twist_keyboard.py cmd_vel:=/robot0/cmd_vel
+4)   rosrun odometry subscriber.py laser_scan:=/robot0/laser_0
+
+# Graph with connected nodes and topics
+rqt_graph
+rosrun tf view_frames
+
+
+Rviz:
+    axes -> 'odom'
+    odom topic -> '/histograms_odom'
+
+Steps to run:
+1) start stdr_launcher and teleop_twist_keyboard (ctrl-c needs to be pressed twice to exit the launcher)
+        roslaunch odometry server_and_teleop.launch
+
+2) start rviz
+        rviz
+
+3) start odometry node
+        roslaunch odometry odometry.launch

@@ -1,0 +1,18 @@
+<launch>
+    <node pkg="odometry" type="subscriber.py" name="odom" output="screen">
+        <!--Robot lasers topic -->
+        <remap from="laser_scan" to="/robot0/laser_0" />
+         <!--Robot frame -->
+        <remap from="robot_frame" to="/robot0" />
+         <!--Map frame -->
+        <remap from="map_frame" to="/map_static" />
+        <!--Robots real odometry topic-->
+        <remap from="odom" to="/robot0/odom" />
+        <!--If true log file of scans will be created in home directory-->
+        <param name="log_scans" type="bool" value="false" />
+        <!--If true log file of calculated odometry will be created in home directory-->
+        <param name="log_odom_calc" type="bool" value="false" />
+        <!--If true log file of real odometry will be created in home directory-->
+        <param name="log_odom_real" type="bool" value="false" />
+    </node>
+</launch>
