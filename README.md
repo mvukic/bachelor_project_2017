@@ -1,4 +1,4 @@
-## Završni rad
+## Bachelor final project
 
-Izvorni kod za izračun odometrije pomoću laserskih očitanja unutar ROS-a i
-pomoću STDR simulatora.
+Source code for bachelors final project.
+Calculate robot odometry from lasers using ROS and it's STDR (standard) simulator.
